@@ -59,9 +59,9 @@ public final class Emoticons
 
         builder.category("general").register(new ValueButtons("buttons").clientSide());
 
-        disableSoundEvents = builder.getBoolean("disable_sound_events", false);
+        disableSoundEvents = builder.getBoolean("disable_sound_events", true);
 
-        disableAnimations = builder.category("animations").getBoolean("disable", false);
+        disableAnimations = builder.category("animations").getBoolean("disable", true);
         disableAnimations.syncable();
         modelType = builder.getInt("model_type", 0).modes(
             IKey.lang("emoticons.player_model.default"),
